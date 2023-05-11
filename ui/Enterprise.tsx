@@ -1,21 +1,18 @@
 import * as React from "react";
 import EnterpriseRouter from "./components/EnterpriseRouter/EnterpriseRouter";
-import Layout from "./components/Layout";
+import Layout from "./components/Layout/Layout";
+import { MyServiceProvider } from "./services/SimpleService/MyService";
+import { SuperComplexServiceProvider } from "./services/SuperComplexService/SuperComplexServiceProvider";
 
-type Props = {
-  className?: string;
-};
-
-function Enterprise({ className }: Props) {
+export default function Enterprise() {
   return (
     <ServicesProvider
       contexts={[
-        [MyService, { some: "value" }],
-        [OtherService, { some: "value" }],
+        [MyServiceProvider, { some: "value" }],
+        [SuperComplexServiceProvider, { some: "value" }],
       ]}
     >
       <Layout
-        className={className}
         nav={
           <Navigation
             items={[
@@ -33,5 +30,3 @@ function Enterprise({ className }: Props) {
     </ServicesProvider>
   );
 }
-
-export default styled(Enterprise).attrs({ className: Enterprise.name })``;

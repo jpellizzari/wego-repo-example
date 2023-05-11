@@ -1,14 +1,9 @@
 import * as React from "react";
 import { Route, Router, Switch } from "react-router-dom";
-import styled from "styled-components";
 import MyComponent from "../MyComponent/MyComponent";
-import SomeEnterpriseComponent from "../SomeEnterpriseComponent";
+import SomeEnterpriseComponent from "../SomeEnterpriseComponent/SomeEnterpriseComponent";
 
-type Props = {
-  className?: string;
-};
-
-function EnterpriseRouter({ className }: Props) {
+export default function EnterpriseRouter() {
   return (
     <Router>
       <Switch>
@@ -18,7 +13,3 @@ function EnterpriseRouter({ className }: Props) {
     </Router>
   );
 }
-
-export default styled(EnterpriseRouter).attrs({
-  className: EnterpriseRouter.name,
-})``;

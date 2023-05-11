@@ -1,7 +1,7 @@
 import * as React from "react";
 import styled from "styled-components";
-import CoreRouter from "./components/CoreRouter";
-import Layout from "./components/Layout";
+import CoreRouter from "./components/CoreRouter/CoreRouter";
+import Layout from "./components/Layout/Layout";
 
 type Props = {
   className?: string;

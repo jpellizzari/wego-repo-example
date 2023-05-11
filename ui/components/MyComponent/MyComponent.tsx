@@ -27,7 +27,7 @@ function MyComponent({ className }: Props) {
   return (
     <div className={className}>
       <div>
-        <Loading busy={submiting} />
+        <Loading busy={submitting} />
       </div>
       <div>{data}</div>
       <div>

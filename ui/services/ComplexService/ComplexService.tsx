@@ -2,7 +2,7 @@ import * as React from "react";
 
 import { useQuery, useQueryClient } from "react-query";
 
-interface ComplexService {
+export interface ComplexService {
   getComplexData(): Promise<string>;
   sendSomeData(input: string): Promise<void>;
 }
